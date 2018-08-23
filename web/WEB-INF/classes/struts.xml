@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <package name="tieba"  namespace="/" extends="struts-default">
+        <action name="TopicAction_*" method="{1}" class="com.wong.web.action.TopicAction">
+            <!--发帖-->
+            <result name="toList" type="redirectAction">
+                <param name="actionName">TopicAction_list</param>
+            </result>
+            <result name="list" >/index.jsp</result>
+            <!--回帖-->
+            <result name="toReplyList" type="redirectAction">
+                <param name="actionName">TopicAction_replyList</param>
+                <param name="topic.tid">%{topic.tid}</param>
+            </result>
+            <result name="replyList">/showTopic.jsp</result>
+            <allowed-methods>add,list,reply,replyList</allowed-methods>
+        </action>
+    </package>
+</struts>

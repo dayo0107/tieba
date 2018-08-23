@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wong.domain">
+    <class name="Reply" table="t_Reply">
+
+        <id name="rid" column="rid">
+            <generator class="native"/>
+        </id>
+        <property name="replyContext" type="java.lang.String"/>
+        <property name="ipAddr" type="java.lang.String"/>
+        <property name="createDate">
+            <column name="createDate" sql-type="datetime"/>
+        </property>
+        <many-to-one name="topic" class="Topic" column="tid"/>
+
+    </class>
+
+</hibernate-mapping>
