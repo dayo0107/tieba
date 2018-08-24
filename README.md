@@ -37,3 +37,5 @@
 ## 搭建环境
   IntelliJ IDEA2018.1.4/ mysql8 /tomcat9 /jdk10    
 ## 项目功能截图
+<img src="https://github.com/dayo0107/tieba/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180824132519.png" >
+<img src="https://github.com/dayo0107/tieba/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180824132531.png" >
